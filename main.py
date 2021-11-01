@@ -8,7 +8,7 @@ def again():
     roll_again = print()
     while dices == 0:
         # Выбор количества кубиков.
-        chosen_dices = int(input("How many dices do you want to roll? (from 1 to 5): "))
+        chosen_dices = int(input("Сколько кубиков выкинуть?(от 1 до 5): "))
         if chosen_dices > 0 and chosen_dices < 6:
             break
 
@@ -44,16 +44,17 @@ def again():
             dices += 1
 
     # Спрашивает пользователя надо ли повторить бросок.
-    print("Do you want to roll again?")
-    while roll_again != "Yes" or roll_again != "No":
-        roll_again = input("Yes - Y | No - N: ").lower().capitalize()
+    print("Броcаем еще раз?")
+    while roll_again != "Да" or roll_again != "Нет":
+        roll_again = input("Да - Y | Нет - N: ").lower().capitalize()
         # Если да - начать всё заново.
         if roll_again == "Y":
             again()
             break
         # Если нет, прервать исполнение.
         if roll_again == "N":
-            print("Goodbye")
+            print("Игра окончена")
             break
+            
 # Закрытие функции.
 again()
